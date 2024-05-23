@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @keyframes moveDown {
   from {
     transform: translateY(0);
@@ -14,6 +15,10 @@
   to {
     opacity: 1;
   }
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
 }
 
 .card__wrapper {
@@ -38,6 +43,7 @@
 }
 
 .card__description__title {
+  display: flex;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5rem;
@@ -51,7 +57,7 @@
   align-items: center;
   padding: 3em;
   box-sizing: border-box;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .card__description__data {
@@ -61,7 +67,8 @@
   display: block;
   border: 1px solid black;
   padding: 20px;
-  max-width: 170px;
+  width: 100%;
+  max-width: 180px;
   background-color: #e3cfcf;
   cursor: pointer;
   font-weight: 800;
@@ -88,7 +95,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .card__wrapper {
     flex-direction: column;
   }
@@ -107,5 +114,8 @@
   .card__img img {
     width: 100%;
     height: auto;
+  }
+  .card__button {
+    min-width: 0;
   }
 }
